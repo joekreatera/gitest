@@ -1,0 +1,598 @@
+Last login: Wed Sep  4 12:50:06 on console
+TOLMOVIL07:~ joe$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+TOLMOVIL07:~ joe$ ls
+Adlm		Applications	Desktop		Documents	Downloads	Library		Movies		Music		Pictures	Public		derby.log	isus
+TOLMOVIL07:~ joe$ cd Do
+Documents/ Downloads/ 
+TOLMOVIL07:~ joe$ cd Documents/
+TOLMOVIL07:Documents joe$ ls
+Classes	XcodeT	maya
+TOLMOVIL07:Documents joe$ cd GitTest
+-bash: cd: GitTest: No such file or directory
+TOLMOVIL07:Documents joe$ mkdir GitTest
+TOLMOVIL07:Documents joe$ ls
+Classes	GitTest	XcodeT	maya
+TOLMOVIL07:Documents joe$ cd GitTest/
+TOLMOVIL07:GitTest joe$ ls
+TOLMOVIL07:GitTest joe$ mkdir testJavaProgram
+TOLMOVIL07:GitTest joe$ javac
+No Java runtime present, requesting install.
+TOLMOVIL07:GitTest joe$ gcc
+clang: error: no input files
+TOLMOVIL07:GitTest joe$ ls
+testJavaProgram
+TOLMOVIL07:GitTest joe$ mv testJavaProgram/ testCProgram/
+TOLMOVIL07:GitTest joe$ ls
+testCProgram
+TOLMOVIL07:GitTest joe$ cd testCProgram/
+TOLMOVIL07:testCProgram joe$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+TOLMOVIL07:testCProgram joe$ cd ..
+TOLMOVIL07:GitTest joe$ mv testProgram/ testProgram/
+TOLMOVIL07:GitTest joe$ mv testCProgram/ testProgram/
+TOLMOVIL07:GitTest joe$ ls
+testProgram
+TOLMOVIL07:GitTest joe$ cd testProgram/
+TOLMOVIL07:testProgram joe$ echo "int main(){ retunr 0;}" >> "main.c"
+TOLMOVIL07:testProgram joe$ ls
+main.c
+TOLMOVIL07:testProgram joe$ cat main.c
+int main(){ retunr 0;}
+TOLMOVIL07:testProgram joe$ git init
+Initialized empty Git repository in /Users/joe/Documents/GitTest/testProgram/.git/
+TOLMOVIL07:testProgram joe$ ls
+main.c
+TOLMOVIL07:testProgram joe$ git add .
+TOLMOVIL07:testProgram joe$ git commit -m "First bad test"
+[master (root-commit) 68ec46f] First bad test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 main.c
+TOLMOVIL07:testProgram joe$ git remote add origin remote https://github.com/joekreatera/gitest.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+TOLMOVIL07:testProgram joe$ git remote add origin https://github.com/joekreatera/gitest.git
+TOLMOVIL07:testProgram joe$ git remote -b
+error: unknown switch `b'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+TOLMOVIL07:testProgram joe$ git remote -v
+origin	https://github.com/joekreatera/gitest.git (fetch)
+origin	https://github.com/joekreatera/gitest.git (push)
+TOLMOVIL07:testProgram joe$ git push origin master
+Username for 'https://github.com': joekreatera
+Password for 'https://joekreatera@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 236 bytes | 236.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+ * [new branch]      master -> master
+TOLMOVIL07:testProgram joe$ git add .
+TOLMOVIL07:testProgram joe$ git commit -m "Second bad test just with readme"
+[master 5333f51] Second bad test just with readme
+ 1 file changed, 5 insertions(+)
+ create mode 100644 README.md
+TOLMOVIL07:testProgram joe$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 351 bytes | 351.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   68ec46f..5333f51  master -> master
+TOLMOVIL07:testProgram joe$ git commit -m "Solved bad test"
+On branch master
+Changes not staged for commit:
+	modified:   main.c
+
+no changes added to commit
+TOLMOVIL07:testProgram joe$ git add .
+TOLMOVIL07:testProgram joe$ git commit -m "Solved bad test"
+[master 6b8e3f4] Solved bad test
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+TOLMOVIL07:testProgram joe$ git commit -m "Solved bad test"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git push origin develop
+error: src refspec develop does not match any.
+error: failed to push some refs to 'https://github.com/joekreatera/gitest.git'
+TOLMOVIL07:testProgram joe$ git commit -a -m "Solved bad test"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git branch develop
+TOLMOVIL07:testProgram joe$ git commit -a -m "Solved bad test"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/joekreatera/gitest/pull/new/develop
+remote: 
+To https://github.com/joekreatera/gitest.git
+ * [new branch]      develop -> develop
+TOLMOVIL07:testProgram joe$ git commit -a -m "Added print f"
+[master 8094603] Added print f
+ 2 files changed, 3 insertions(+)
+TOLMOVIL07:testProgram joe$ git push origin develop
+Everything up-to-date
+TOLMOVIL07:testProgram joe$ git push origin develop
+Everything up-to-date
+TOLMOVIL07:testProgram joe$ git commit -a -m "Added print f"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git commit
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git commit develop
+error: pathspec 'develop' did not match any file(s) known to git.
+TOLMOVIL07:testProgram joe$ git commit help
+error: pathspec 'help' did not match any file(s) known to git.
+TOLMOVIL07:testProgram joe$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+TOLMOVIL07:testProgram joe$ git commit -m "Added print f"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git checkout -b develop master
+fatal: A branch named 'develop' already exists.
+TOLMOVIL07:testProgram joe$ git checkout develop
+Switched to branch 'develop'
+TOLMOVIL07:testProgram joe$ git commit -m "Added print f"
+On branch develop
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git push origin develop
+Everything up-to-date
+TOLMOVIL07:testProgram joe$ git push origin
+fatal: The current branch develop has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin develop
+
+TOLMOVIL07:testProgram joe$ git commit -a -m "Added print f"
+On branch develop
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git commit -a -m "Added printf -error "
+[develop d3e777b] Added printf -error
+ 1 file changed, 1 insertion(+)
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 321 bytes | 321.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   6b8e3f4..d3e777b  develop -> develop
+TOLMOVIL07:testProgram joe$ git commit -a -m "Added printf, no error "
+[develop 9041693] Added printf, no error
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 328.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   d3e777b..9041693  develop -> develop
+TOLMOVIL07:testProgram joe$ git branch release
+TOLMOVIL07:testProgram joe$ git push origin release
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'release' on GitHub by visiting:
+remote:      https://github.com/joekreatera/gitest/pull/new/release
+remote: 
+To https://github.com/joekreatera/gitest.git
+ * [new branch]      release -> release
+TOLMOVIL07:testProgram joe$ git checkout release
+Switched to branch 'release'
+TOLMOVIL07:testProgram joe$ git commit -a -m "This is release 1 "
+On branch release
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git commit -a -m "This is release 1 "
+[release ba88f0e] This is release 1
+ 1 file changed, 3 insertions(+)
+TOLMOVIL07:testProgram joe$ git push origin release
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   9041693..ba88f0e  release -> release
+TOLMOVIL07:testProgram joe$ git checkout master
+Switched to branch 'master'
+TOLMOVIL07:testProgram joe$ git merge --no-ff release
+Auto-merging main.c
+CONFLICT (content): Merge conflict in main.c
+Automatic merge failed; fix conflicts and then commit the result.
+TOLMOVIL07:testProgram joe$ git commit -a -m "Going to master "
+[master 596fe2e] Going to master
+TOLMOVIL07:testProgram joe$ git push origin master
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 775 bytes | 775.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   5333f51..596fe2e  master -> master
+TOLMOVIL07:testProgram joe$ git merge --no-ff release
+Already up to date.
+TOLMOVIL07:testProgram joe$ git checkout release
+error: Your local changes to the following files would be overwritten by checkout:
+	main.c
+Please commit your changes or stash them before you switch branches.
+Aborting
+TOLMOVIL07:testProgram joe$ git commit -a -m "FIxed main.c"
+[master 542cc1b] FIxed main.c
+ 1 file changed, 4 deletions(-)
+TOLMOVIL07:testProgram joe$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 337.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   596fe2e..542cc1b  master -> master
+TOLMOVIL07:testProgram joe$ git checkout release
+Switched to branch 'release'
+TOLMOVIL07:testProgram joe$ git commit -a -m "FIxed main.c"
+On branch release
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git checkout release
+Already on 'release'
+TOLMOVIL07:testProgram joe$ mkdir tests
+TOLMOVIL07:testProgram joe$ git add .
+TOLMOVIL07:testProgram joe$ gcc main.c -o main.do
+main.c:5:5: warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+    printf("hello");
+    ^
+main.c:5:5: note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+1 warning generated.
+TOLMOVIL07:testProgram joe$ git checkout develop
+Switched to branch 'develop'
+TOLMOVIL07:testProgram joe$ gcc main.c -o main.do
+main.c:4:5: warning: implicitly declaring library function 'printf' with type 'int (const char *, ...)' [-Wimplicit-function-declaration]
+    printf("hello");
+    ^
+main.c:4:5: note: include the header <stdio.h> or explicitly provide a declaration for 'printf'
+1 warning generated.
+TOLMOVIL07:testProgram joe$ gcc main.c -o tests/main.do
+TOLMOVIL07:testProgram joe$ ./tests/main.do 
+helloTOLMOVIL07:testProgram joe$ gcc main.c -o tests/main.do
+TOLMOVIL07:testProgram joe$ ./tests/main.do 
+hello 
+TOLMOVIL07:testProgram joe$ git commit -a -m "added test with program compiled!"
+-bash: !": event not found
+TOLMOVIL07:testProgram joe$ git commit -a -m "added test with program compiled"+
+[develop b0daf3a] added test with program compiled+
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+TOLMOVIL07:testProgram joe$ git push develop
+fatal: 'develop' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   9041693..b0daf3a  develop -> develop
+TOLMOVIL07:testProgram joe$ git add .
+TOLMOVIL07:testProgram joe$ git commit -a -m "Do added test"
+[develop abb8547] Do added test
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100755 main.do
+ create mode 100755 tests/main.do
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 1.15 KiB | 1.15 MiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/joekreatera/gitest.git
+   b0daf3a..abb8547  develop -> develop
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c		main.do		tests
+TOLMOVIL07:testProgram joe$ rm main.do 
+TOLMOVIL07:testProgram joe$ git commit -a -m "Do added test"
+[develop 6f8d334] Do added test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100755 main.do
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 223 bytes | 223.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/joekreatera/gitest.git
+   abb8547..6f8d334  develop -> develop
+TOLMOVIL07:testProgram joe$ git checkout release
+Switched to branch 'release'
+TOLMOVIL07:testProgram joe$ git merge --no-ff develop
+Auto-merging main.c
+CONFLICT (content): Merge conflict in main.c
+Automatic merge failed; fix conflicts and then commit the result.
+TOLMOVIL07:testProgram joe$ git merge develop
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+TOLMOVIL07:testProgram joe$ git checkout develop
+main.c: needs merge
+error: you need to resolve your current index first
+TOLMOVIL07:testProgram joe$ git commit -a -m "Do added test"
+[release 7c89346] Do added test
+TOLMOVIL07:testProgram joe$ git checkout develop
+Switched to branch 'develop'
+TOLMOVIL07:testProgram joe$ git merge release
+Updating 6f8d334..7c89346
+Fast-forward
+ main.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+TOLMOVIL07:testProgram joe$ git checkout release
+Switched to branch 'release'
+TOLMOVIL07:testProgram joe$ git push origin develop
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 441 bytes | 441.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   6f8d334..7c89346  develop -> develop
+TOLMOVIL07:testProgram joe$ git push origin relase
+error: src refspec relase does not match any.
+error: failed to push some refs to 'https://github.com/joekreatera/gitest.git'
+TOLMOVIL07:testProgram joe$ git push origin release
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   ba88f0e..7c89346  release -> release
+TOLMOVIL07:testProgram joe$ git merge -no-ff master
+error: did you mean `--no-ff` (with two dashes ?)
+TOLMOVIL07:testProgram joe$ git merge --no-ff master
+hint: Waiting for your editor to close the file... 
+[1]+  Stopped                 git merge --no-ff master
+TOLMOVIL07:testProgram joe$ git push origin master
+Everything up-to-date
+TOLMOVIL07:testProgram joe$ git checkout release
+M	README.md
+Already on 'release'
+TOLMOVIL07:testProgram joe$ git merge master
+hint: Waiting for your editor to close the file... error: There was a problem with the editor 'vi'.
+Not committing merge; use 'git commit' to complete the merge.
+TOLMOVIL07:testProgram joe$ git merge master
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+TOLMOVIL07:testProgram joe$ git commit -a -m "Done master"
+[release 549cf9b] Done master
+TOLMOVIL07:testProgram joe$ git push origin master
+Everything up-to-date
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c		tests
+TOLMOVIL07:testProgram joe$ git commit -m "Done master"
+On branch release
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git checkout master
+Switched to branch 'master'
+TOLMOVIL07:testProgram joe$ git commit -a -m "Done master"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git commit -m "Done master"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c
+TOLMOVIL07:testProgram joe$ git checkout release
+Switched to branch 'release'
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c		tests
+TOLMOVIL07:testProgram joe$ git checkout master
+Switched to branch 'master'
+TOLMOVIL07:testProgram joe$ git merge release
+Updating 542cc1b..549cf9b
+Fast-forward
+ main.c        |   7 ++++++-
+ tests/main.do | Bin 0 -> 8432 bytes
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+ create mode 100755 tests/main.do
+TOLMOVIL07:testProgram joe$ git commit -a -m "Final release"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c		tests
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c		tests
+TOLMOVIL07:testProgram joe$ git commit -m "Final release"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ git commit"Final release"
+git: 'commitFinal release' is not a git command. See 'git --help'.
+TOLMOVIL07:testProgram joe$ git commit "Final release"
+error: pathspec 'Final release' did not match any file(s) known to git.
+TOLMOVIL07:testProgram joe$ git commit -m "Final release"
+On branch master
+nothing to commit, working tree clean
+TOLMOVIL07:testProgram joe$ push origin master
+-bash: push: command not found
+TOLMOVIL07:testProgram joe$ git push origin master
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 324 bytes | 324.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/joekreatera/gitest.git
+   542cc1b..549cf9b  master -> master
+TOLMOVIL07:testProgram joe$ ls
+README.md	main.c		tests
+TOLMOVIL07:testProgram joe$ git commit -m "Final release, fixed typos"
+On branch master
+Changes not staged for commit:
+	modified:   main.c
+
+no changes added to commit
+TOLMOVIL07:testProgram joe$ git commit -a -m "Final release, fixed typos"
+[master c718173] Final release, fixed typos
+ 1 file changed, 2 deletions(-)
+TOLMOVIL07:testProgram joe$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 348 bytes | 348.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/joekreatera/gitest.git
+   549cf9b..c718173  master -> master
+TOLMOVIL07:testProgram joe$ 
